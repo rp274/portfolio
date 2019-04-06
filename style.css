@@ -54,36 +54,11 @@ header {
 header h1 {
     margin-top: auto;
     margin-bottom: auto;
-    /* line-height: 42pt; */
 }
 
 section h2 {
     margin-bottom: 25px;
-    /* float: left; */
     text-decoration: underline;
-}
-
-#about {
-    background-color: lightgray;
-}
-
-#about h2 {
-    color: #eee;
-}
-
-#portfolio h2 {
-    margin-bottom: 0;
-}
-
-#contact {
-    background-color: lightgray;
-    display: flex;
-    flex-direction: column;
-}
-
-#contact a.button {
-    margin-left: auto;
-    margin-right: auto;
 }
 
 footer {
@@ -125,4 +100,25 @@ a.button {
     border-style: inset;
     border-width: 0 0 250px 255px;
     border-color: transparent transparent gray transparent;
+}
+
+#about {
+    background-color: lightgray;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#portfolio h2 {
+    margin-bottom: 0;
+}
+
+#contact {
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact a.button {
+    margin-left: auto;
+    margin-right: auto;
 }
