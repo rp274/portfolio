@@ -3,9 +3,20 @@ box-sizing: border-box;
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
     text-align: center;
     margin: 0;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 p {
@@ -14,26 +25,28 @@ p {
 
 nav {
     position: fixed;
-    background-color: rgba(0,0,0,.5);
-    color:white;
+    background-color: rgba(6, 7, 14, 1);
+    color:rgba(197, 175, 160, 1);
     left: 0;
     right: 0;
     bottom: 0;
     z-index: 10;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     padding: 1% 1%;
+    text-transform: uppercase;
 }
 
 nav a:link {
     margin-left: auto;
     margin-right: auto;
     text-decoration: none;
-    color: white;
+    color: rgba(197, 175, 160, 1);
 }
 nav a:visited {
     text-decoration: none;
-    color: white;
+    color: rgba(197, 175, 160, 1);
 }
 
 nav a:hover {
@@ -45,20 +58,19 @@ header {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background: url();
+    background: url(https://images.unsplash.com/photo-1503435980610-a51f3ddfee50?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80);
     background-size: cover;
     height: 100vh;
     width: 100vw;
 }
 
 header h1 {
-    margin-top: auto;
-    margin-bottom: auto;
+    margin-top: 49%;
+    margin-bottom: 51%;
 }
 
 section h2 {
     margin-bottom: 25px;
-    text-decoration: underline;
 }
 
 footer {
@@ -103,9 +115,14 @@ a.button {
 }
 
 #about {
-    background-color: lightgray;
+    background-color: rgba(148, 161, 135, 1);
+    color: white;
     margin-left: auto;
     margin-right: auto;
+}
+
+#portfolio {
+    background-color: white;
 }
 
 #portfolio h2 {
@@ -113,12 +130,12 @@ a.button {
 }
 
 #contact {
-    background-color: lightgray;
-    display: flex;
-    flex-direction: column;
+    background: rgba(41, 82, 74, 1);
+    color: rgba(197, 175, 160, 1);
 }
 
 #contact a.button {
-    margin-left: auto;
-    margin-right: auto;
+    color: rgba(197, 175, 160, 1);
+    border: none;
+    font-size: 150%;
 }
