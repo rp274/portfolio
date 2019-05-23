@@ -4,18 +4,22 @@ body {
   border: 0;
   box-sizing: border-box;
   text-align: center;
-  background: #eee;
-  font-family: sans-serif;
+  background: rgba(163, 209, 153,.5);
+  font-family: 'Raleway', sans-serif;
 }
 
 body a {
   text-decoration: none;
 }
 
+h3 {
+  
+}
+
 /********** Navigation **********/
 nav {
     position: fixed;
-    background-color: rgba(6, 7, 14,1);
+    background-color: rgb(0, 0, 0);
     left: 0;
     right: 0;
     bottom: 0;
@@ -33,12 +37,12 @@ nav div {
 
 nav div > a:link {
     text-decoration: none;
-    color: white;
+    color: rgb(255,255,255);
 }
 
 nav div > a:visited {
     text-decoration: none;
-    color: white;
+    color: rgb(255,255,255);
     padding: 16px;
 }
 
@@ -48,7 +52,7 @@ nav ul {
     text-decoration: none
 }
 
-nav ul li {
+nav li {
     margin-right: 20px;
     text-decoration: none;
     list-style: none;
@@ -56,18 +60,19 @@ nav ul li {
 
 }
 nav ul li a:link {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     text-decoration: none;
-    color: white;
+    color: rgb(255,255,255);
 }
 nav ul li a:visited {
     text-decoration: none;
-    color: white;
+    color: rgb(255,255,255);
 }
 
-nav a:hover {
+nav li a:hover {
     cursor: pointer;
+    border-bottom: 2px solid rgb(255,255,255);
+    margin: -2px;
 }
 
 .logo {
@@ -77,7 +82,10 @@ nav a:hover {
 /********** header **********/
 header {
   text-align: center;
-  background: slategray;
+  /* background: #0788b7; */
+  background: url(https://images.unsplash.com/photo-1555875993-2f6e075d3a17?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1934&q=80) no-repeat;
+  background-size: cover;
+  background-position-y: -150px;
 }
 
 h3 {
@@ -86,10 +94,8 @@ h3 {
 }
 
 .container {
-  margin-left: auto;
-  margin-right: auto;
-  min-height: 300px;
-  background: white;
+  margin: auto;
+  background: rgb(255,255,255);
   box-shadow: 0px 0px 25px rgba(0,0,0,.3 );
   padding: 25px 25px 0px 25px;
   display: flex;
@@ -103,8 +109,12 @@ h3 {
 }
 
 .intro-info {
-  text-align: left;
+  text-align: center;
   font-size: 16pt;
+}
+
+.tech-icons {
+  display: none;
 }
 
 .intro {
@@ -119,14 +129,6 @@ h3 {
 
 hr{
   margin-top: 40px;
-}
-
-.tech-icons {
-  text-align: left;
-}
-
-.jq-icon {
-  height: 40px;
 }
 
 .atten {
@@ -146,11 +148,8 @@ hr{
 
 /********** about **********/
 #about {
-  margin-top: 75px;
-  margin-bottom: 75px;
-  margin-left: auto;
-  margin-right: auto;
-  background: #eee;
+  margin: 75px auto;
+  background: transparent;
   max-width: 800px;
   text-align: center;
   font-size: 20pt;
@@ -164,8 +163,8 @@ hr{
 }
 /********** work **********/
 #work {
-  background: white;
-  padding: 50px;
+  background: rgb(255,255,255);
+  padding: 50px 20px;
   font-size: 20pt;
   box-shadow: 0px 0px 25px rgba(0,0,0,.3 );
 }
@@ -180,8 +179,7 @@ hr{
 }
 
 .proj {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 .proj:nth-child(odd) {
@@ -193,27 +191,68 @@ hr{
   box-shadow: 0px 0px 5px rgba(0,0,0,.3 );
   width: 100%;
   height: auto;
+  opacity: 1;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.overlay {
+  transition: .5s ease;
+  opacity: 0;
+  margin-bottom: -50px;
+  transform: translate(0%, -250%);
+  text-align: center;
+}
+
+.text {
+  background-color: rgb(255, 206, 70);
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+.thumbnail-container:hover .proj-thumbnail {
+  opacity: 0.3;
+}
+
+.thumbnail-container:hover .overlay {
+  opacity: 1;
 }
 
 .proj-text {
   max-width: 300px;
   font-size: 12pt;
+  text-align: justify;
+}
+
+.proj-text-tech {
+  max-width: 300px;
+  font-size: 12pt;
+  text-align: center;
 }
 
 .button {
   font-size: 12pt;
-  background-color: gray;
-  color: white;
+  background-color: rgb(255, 216, 110);
+  color: rgb(0, 0, 0);
+  font-weight: bold;
   padding: 10px 25px 10px 25px;
   margin: 25px;
 }
 
+.button:hover {
+  /* border-radius: 10px; */
+  box-shadow: 0 0 5px rgba(0,0,0,.3 );
+}
+
 /********** contact **********/
 #contact {
-  background: gray;
+  background: rgb(61, 112, 177);
   padding: 50px 20px 85px 20px;
   font-size: 20pt;
-  color: white;
+  color: rgb(255,255,255);
 }
 
 #contact > p {
@@ -222,15 +261,19 @@ hr{
 }
 
 #contact a:link {
-  color: white;
+  color: rgb(255,255,255);
 }
 
 #contact a:visited {
-  color: white;
+  color: rgb(255,255,255);
+}
+
+.contact-info {
+  display: none;
 }
 
 .fab, .fas {
-  font-size: 50px;
+  font-size: 30pt;
   margin: 10px;
 }
 
@@ -239,15 +282,39 @@ hr{
 /********** media query **********/
 
 
-@media only screen and (min-width: 525px) {
+@media only screen and (min-width: 550px) {
   .intro-photo {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
   }
   .intro-info {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     width: 475px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .container {
+    margin: 0 50px;
+    padding: 25px;
+    border-radius: 10px;
+    transform: translateY(50px);
+    flex-direction: column;
+  }
+
+  .intro-photo {
+      padding-right: 15px;
+    }
+
+  .intro-info {
+    text-align: center;
+  }
+
+  .foot {
+    text-align: center;
+  }
+  
+  .tech-icons {
+    display: none;
   }
 }
 
@@ -255,7 +322,7 @@ hr{
 @media only screen and (min-width: 992px) {
     nav {
         position: fixed;
-        background-color: rgba(6, 7, 14,1);
+        background-color: rgb(0, 0, 0);
         top: 0;
         left: 0;
         right: 0;
@@ -267,11 +334,17 @@ hr{
         padding: 1% 1%;
         text-transform: uppercase;
         filter: opacity(100%);
+        max-width: 2000px;
+        margin: 0 auto;
     }
 
     .logo{
       display: inline;
       margin-left: 50px;
+    }
+
+    .logo a:hover {
+      font-weight: bolder;
     }
 
     .container {
@@ -292,6 +365,18 @@ hr{
 
     .intro-info {
       padding-right: 45px;
+      text-align: left;
+    }
+
+    .tech-icons {
+      display: inline;
+      font-size: 35pt;
+      text-align: left;
+
+    }
+
+    .jq-icon {
+      height: 40px;
     }
 
     #about {
@@ -302,15 +387,21 @@ hr{
       padding-right: 0;
     }
 
-    .proj-container {
-      max-width: 1000px;
-      margin-left: auto;
-      margin-right: auto;
+    .firstletter {
+      color: rgb(61, 112, 177);
+      float: left;
+      font-family: Inconsolata;
+      font-size: 75px;
+      line-height: 60px;
+      padding-top: 4px;
+      padding-right: 8px;
+      padding-left: 3px;
     }
 
     .proj-container {
-    flex-direction: row;
-    max-width: 1000px;
+      flex-direction: row;
+      max-width: 1000px;
+      margin: 0 auto;
     }
 
     #contact {
